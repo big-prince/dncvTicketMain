@@ -5,6 +5,7 @@ A complete e-ticketing system for De Noble Choral Voices 5th Edition Concert wit
 ## 🎵 Project Overview
 
 This is a full-stack e-ticketing application built with:
+
 - **Frontend**: React + TypeScript (Vite), Tailwind CSS, Framer Motion
 - **Backend**: Node.js + Express, MongoDB, Nodemailer
 - **Payment**: Manual Bank Transfer (Primary), Paystack/OPay (Optional)
@@ -13,6 +14,7 @@ This is a full-stack e-ticketing application built with:
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js (v18+)
 - MongoDB
 - Gmail App Password (for email notifications)
@@ -20,12 +22,14 @@ This is a full-stack e-ticketing application built with:
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <your-repo-url>
    cd dncv
    ```
 
 2. **Setup Backend**
+
    ```bash
    cd server
    npm install
@@ -63,25 +67,31 @@ dncv/
 ## 🔧 Configuration
 
 ### Backend Environment Variables
+
 Copy `server/.env.example` to `server/.env` and configure:
+
 - Database connection
 - Email service (Gmail App Password)
 - Bank account details
 - Admin credentials
 
 ### Frontend Environment Variables
+
 Copy `client/.env.example` to `client/.env` and configure:
+
 - API base URL
 - Bank details for display
 
 ## 🚀 Deployment
 
 ### Backend (Render/Railway/etc.)
+
 - Set environment variables
 - Enable cron jobs if needed
 - Configure keep-alive URL
 
 ### Frontend (Vercel/Netlify/etc.)
+
 - Set API base URL
 - Build and deploy
 

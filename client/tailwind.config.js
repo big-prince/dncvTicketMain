@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['DM Sans', 'system-ui', 'sans-serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'serif'],
+        'display': ['Montserrat', 'system-ui', 'sans-serif'],
+        'body': ['Inter', 'system-ui', 'sans-serif'],
+        'elegant': ['Cormorant Garamond', 'Georgia', 'serif'],
       },
       colors: {
         // Clean modern dark theme
