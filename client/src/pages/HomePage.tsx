@@ -62,7 +62,7 @@ const HomePage: React.FC = () => {
       ],
       image: "/images/Regular TIcket.jpg",
       icon: Ticket,
-      popular: true,
+      popular: false,
       gradient: "from-green-500 to-emerald-600",
       bgGradient: "from-green-500/10 to-emerald-600/10",
       iconBg: "from-green-400 to-emerald-500",
@@ -81,7 +81,7 @@ const HomePage: React.FC = () => {
       ],
       image: "/images/VIP single.jpg",
       icon: Crown,
-      popular: false,
+      popular: true,
       gradient: "from-purple-500 to-pink-600",
       bgGradient: "from-purple-500/10 to-pink-600/10",
       iconBg: "from-purple-400 to-pink-500",
@@ -120,7 +120,7 @@ const HomePage: React.FC = () => {
       ],
       image: "/images/Table.jpg",
       icon: Trophy,
-      popular: false,
+      popular: true,
       gradient: "from-amber-500 to-orange-600",
       bgGradient: "from-amber-500/10 to-orange-600/10",
       iconBg: "from-amber-400 to-orange-500",
@@ -631,7 +631,7 @@ const HomePage: React.FC = () => {
                     className="relative z-10"
                   >
                     <Link
-                      to="/tickets"
+                      to={`/tickets?selected=${ticket.id}`}
                       className={`w-full ${
                         ticket.popular
                           ? "bg-gradient-to-r from-amber-500 to-orange-500 shadow-2xl shadow-amber-500/30"

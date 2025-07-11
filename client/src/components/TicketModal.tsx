@@ -53,7 +53,35 @@ const TicketModal: React.FC<TicketModalProps> = ({
     phone: "",
   });
 
-  if (!ticket) return null;
+  // Reset form when modal closes
+  const resetForm = () => {
+    setQuantity(1);
+    setTransferCompleted(false);
+    setCompletedTransferData(null);
+    setCustomerInfo({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+    });
+  };
+
+  // Handle modal close
+  const handleClose = () => {
+    resetForm();
+    onClose();
+  };
+
+  // Validate ticket object
+  if (
+    !ticket ||
+    !ticket.id ||
+    !ticket.name ||
+    typeof ticket.price !== "number"
+  ) {
+    console.error("Invalid ticket object passed to TicketModal:", ticket);
+    return null;
+  }
 
   const total = ticket.price * quantity;
   const bankDetails = getBankDetails();
@@ -88,8 +116,7 @@ const TicketModal: React.FC<TicketModalProps> = ({
 
           // Clear form and close modal after 4 seconds
           setTimeout(() => {
-            resetForm();
-            onClose();
+            handleClose();
           }, 6000);
         }
       }
@@ -99,23 +126,6 @@ const TicketModal: React.FC<TicketModalProps> = ({
     } finally {
       setIsProcessing(false);
     }
-  };
-
-  const handleClose = () => {
-    resetForm();
-    onClose();
-  };
-
-  const resetForm = () => {
-    setQuantity(1);
-    setTransferCompleted(false);
-    setCompletedTransferData(null);
-    setCustomerInfo({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-    });
   };
 
   const copyToClipboard = (text: string) => {
