@@ -191,3 +191,123 @@ export interface AnalyticsData {
     orderCount: number;
   }>;
 }
+
+// Enhanced Analytics Types
+export interface AnalyticsInsight {
+  type: "success" | "info" | "warning" | "error";
+  title: string;
+  description: string;
+  priority: "low" | "medium" | "high";
+}
+
+export interface AnalyticsSuggestion {
+  type: "optimization" | "timing" | "projection" | "marketing";
+  title: string;
+  description: string;
+  impact: "low" | "medium" | "high" | "info";
+  effort: "none" | "low" | "medium" | "high";
+}
+
+export interface AnalyticsAlert {
+  type: "warning" | "critical";
+  title: string;
+  description: string;
+  urgency: "low" | "medium" | "high" | "critical";
+}
+
+export interface AIInsights {
+  insights: AnalyticsInsight[];
+  suggestions: AnalyticsSuggestion[];
+  alerts: AnalyticsAlert[];
+}
+
+export interface CustomerSegment {
+  _id: string;
+  customerName: string;
+  totalSpent: number;
+  ticketCount: number;
+  orderCount: number;
+  firstPurchase: string;
+  lastPurchase: string;
+  avgOrderValue: number;
+  customerValue: "Regular" | "Premium" | "VIP";
+  daysSinceFirstPurchase: number;
+}
+
+export interface TicketTypeAnalytics {
+  _id: string;
+  count: number;
+  revenue: number;
+  orders: number;
+  avgPrice: number;
+}
+
+export interface TimeSeriesData {
+  _id: { date: string };
+  count: number;
+  revenue: number;
+  tickets?: number;
+}
+
+export interface HourlyPattern {
+  _id: number;
+  count: number;
+  revenue: number;
+}
+
+export interface GeographicData {
+  _id: string;
+  count: number;
+  revenue: number;
+}
+
+export interface ResponseTimeMetrics {
+  avgResponseTime: number;
+  maxResponseTime: number;
+  minResponseTime: number;
+}
+
+export interface AbandonmentData {
+  totalStarted: number;
+  completed: number;
+  abandoned: number;
+  completionRate: number;
+  abandonmentRate: number;
+}
+
+export interface EnhancedAnalyticsData {
+  salesOverTime: TimeSeriesData[];
+  revenueOverTime: TimeSeriesData[];
+  hourlyPurchasePattern: HourlyPattern[];
+  ticketTypeDistribution: TicketTypeAnalytics[];
+  averageOrderValue: {
+    avgOrderValue: number;
+    medianOrderValue: number;
+    totalOrders: number;
+    totalRevenue: number;
+  };
+  customerSegmentation: CustomerSegment[];
+  topCustomers: CustomerSegment[];
+  customerRetention: any[];
+  geographicDistribution: GeographicData[];
+  paymentStatusDistribution: any[];
+  responseTimeMetrics: ResponseTimeMetrics[];
+  abandonmentRate: AbandonmentData[];
+  weeklyTrends: any[];
+  monthlyComparison: any[];
+  projectionData: {
+    dailyAvgRevenue: number;
+    dailyAvgTickets: number;
+    totalDays: number;
+  };
+  aiInsights: AIInsights;
+  metadata: {
+    lastUpdated: string;
+    dataRange: {
+      from: string;
+      to: string;
+    };
+    totalDataPoints: number;
+    confidence: string;
+  };
+}

@@ -226,6 +226,16 @@
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
   }
+
+  /* Scrollbar hiding utilities */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }
 
 @layer utilities {
@@ -358,6 +368,14 @@
   .floating-slow,
   .floating-fast {
     animation: none; /* Disable animations on mobile for better performance */
+  }
+
+  .mobile-text-sm {
+    font-size: 0.75rem;
+  }
+
+  .mobile-p-2 {
+    padding: 0.5rem;
   }
 }
 
