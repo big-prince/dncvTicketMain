@@ -1,0 +1,311 @@
+/* TicketVerificationPage.css */
+
+/* Main container */
+.ticket-verification-page {
+  padding: 1.5rem;
+}
+
+/* Verification container with panels */
+.verification-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .verification-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Card styling */
+.verification-card {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  border: 1px solid #374151;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #374151;
+  background-color: #111827;
+  border-radius: 0.375rem 0 0 0.375rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.input-group button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  border-radius: 0 0.375rem 0.375rem 0;
+  transition: background-color 0.2s;
+}
+
+.input-group button:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.input-group button:disabled {
+  background-color: #6b7280;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Scanner toggle */
+.scanner-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.scanner-toggle button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #4b5563;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+}
+
+.scanner-toggle button:hover {
+  background-color: #374151;
+}
+
+/* QR Scanner */
+.qr-scanner-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.qr-video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.stop-scanner-btn {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background-color: rgba(239, 68, 68, 0.9);
+  color: white;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+}
+
+.stop-scanner-btn:hover {
+  background-color: rgb(220, 38, 38);
+}
+
+/* Verification result */
+.verification-result {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.verification-result.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.verification-result.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.result-icon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.result-icon.success {
+  color: #10b981;
+}
+
+.result-icon.error {
+  color: #ef4444;
+}
+
+.result-details {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.result-details p {
+  margin-bottom: 0.5rem;
+}
+
+.already-used {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  border-radius: 0.375rem;
+}
+
+/* Stats section */
+.verification-stats {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  border: 1px solid #374151;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.stats-summary {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1rem;
+  background-color: #111827;
+  border-radius: 0.5rem;
+  border: 1px solid #374151;
+  min-width: 180px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.stat-percentage {
+  font-size: 1.25rem;
+  color: #10b981;
+  font-weight: 500;
+}
+
+/* Stats by type */
+.stats-by-type {
+  margin-top: 1.5rem;
+}
+
+.type-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 640px) {
+  .type-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.type-stat-card {
+  background-color: #111827;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #374151;
+}
+
+.progress-bar-container {
+  height: 0.5rem;
+  background-color: #374151;
+  border-radius: 9999px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+}
+
+/* Recent verifications */
+.recent-verifications {
+  margin-top: 1.5rem;
+}
+
+.recent-list {
+  margin-top: 1rem;
+  background-color: #111827;
+  border-radius: 0.375rem;
+  border: 1px solid #374151;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #374151;
+}
+
+.recent-item:last-child {
+  border-bottom: none;
+}
+
+.recent-name {
+  font-weight: 500;
+  color: white;
+}
+
+.recent-ticket {
+  color: #d1d5db;
+  font-size: 0.875rem;
+}
+
+.recent-time {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.no-recent {
+  text-align: center;
+  padding: 1.5rem;
+  color: #9ca3af;
+}
+
+/* Loading states */
+.loading-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #9ca3af;
+}
+
+.error-loading-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #ef4444;
+}

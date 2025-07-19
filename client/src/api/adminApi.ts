@@ -81,6 +81,26 @@ export const adminApi = {
     const response = await api.post("/api/admin/system/maintenance");
     return response.data;
   },
+
+  // Ticket Verification
+  verifyTicket: async (ticketId: string) => {
+    const response = await api.post("/api/tickets/verify", {
+      ticketId,
+      verifiedBy: "Admin Portal",
+    });
+    return response.data;
+  },
+
+  // Get verification statistics
+  getVerificationStats: async () => {
+    const response = await api.get("/api/admin/verification/stats");
+    return response.data;
+  },
+
+  // Check if admin is authenticated
+  isAuthenticated: () => {
+    return adminAuth.isAuthenticated();
+  },
 };
 
 // Admin authentication utilities

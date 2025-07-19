@@ -106,6 +106,31 @@ export const verifyPayment = async (reference: string) => {
   return response.data;
 };
 
+// Verify ticket by ID or QR code
+export interface TicketVerificationResponse {
+  success: boolean;
+  message: string;
+  data?: {
+    customerName: string;
+    ticketType: string;
+    verifiedAt: string;
+    isUsed?: boolean;
+    usedAt?: string;
+    verifiedBy?: string;
+  };
+}
+
+export const verifyTicket = async (
+  ticketId: string,
+  verifiedBy: string = "Admin"
+): Promise<TicketVerificationResponse> => {
+  const response = await api.post(`/api/tickets/verify`, {
+    ticketId,
+    verifiedBy,
+  });
+  return response.data;
+};
+
 // Utility functions
 export const getBankDetails = () => ({
   bankName: import.meta.env.VITE_BANK_NAME || "Access Bank Plc",

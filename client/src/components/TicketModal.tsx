@@ -409,9 +409,13 @@ const TicketModal: React.FC<TicketModalProps> = ({
                           </button>
                         </div>
                       </div>
-                      <p className="text-sm text-green-200 text-center">
+                      <p className="text-sm text-green-200 text-center mb-2">
                         Save this reference! You'll receive your tickets once we
                         verify your payment.
+                      </p>
+                      <p className="text-sm text-green-200 text-center font-semibold">
+                        Please contact Jack (+234 814 934 9466) or Elvis (+234 806 868 3392) 
+                        to follow up on your payment verification.
                       </p>
                     </div>
                   )}
@@ -435,10 +439,14 @@ const TicketModal: React.FC<TicketModalProps> = ({
                         </li>
                         <li>You'll get your unique payment reference</li>
                         <li>
+                          After clicking "Transfer Done", contact Jack (+234 814 934 9466) 
+                          or Elvis (+234 806 868 3392) to follow up on your payment
+                        </li>
+                        <li>
                           You'll receive your e-ticket to your email once we
                           verify payment
                         </li>
-                        <li>We verify within 2hours </li>
+                        <li>We verify payments within 2 hours</li>
                       </ol>
                     </div>
                   </div>
@@ -483,7 +491,8 @@ const TicketModal: React.FC<TicketModalProps> = ({
                       <span className="font-semibold">Payment Confirmed!</span>
                     </div>
                     <p className="text-sm text-gray-400">
-                      Check your email for ticket details
+                      Check your email for payment details and contact Jack (+234 814 934 9466) 
+                      or Elvis (+234 806 868 3392) to follow up
                     </p>
                     <p className="text-xs text-gray-500 mt-1">
                       This dialog will close automatically...

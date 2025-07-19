@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@types/react-router-dom": "^5.3.3",
+    "@yudiel/react-qr-scanner": "^2.3.1",
     "autoprefixer": "^10.4.21",
     "axios": "^1.10.0",
     "framer-motion": "^12.23.0",

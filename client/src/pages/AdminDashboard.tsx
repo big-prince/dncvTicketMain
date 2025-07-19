@@ -8,6 +8,7 @@ import {
   LogOut,
   User,
   RefreshCw,
+  Ticket,
 } from "lucide-react";
 import {
   adminApi,
@@ -19,6 +20,7 @@ import {
 import toast from "react-hot-toast";
 import AnalyticsPage from "./AnalyticsPage";
 import PaymentsPage from "./PaymentsPage";
+import TicketVerificationPage from "./TicketVerificationPage";
 
 interface AdminDashboardProps {
   adminData: AdminProfile;
@@ -208,6 +210,19 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({
             >
               Analytics
             </button>
+            <button
+              onClick={() => setActiveTab("verification")}
+              className={`flex-shrink-0 px-4 py-3 text-sm font-medium transition-colors ${
+                activeTab === "verification"
+                  ? "text-yellow-400 border-b-2 border-yellow-400 bg-yellow-900/20"
+                  : "text-gray-400 hover:text-gray-300"
+              }`}
+            >
+              <span className="flex items-center">
+                <Ticket className="h-4 w-4 mr-1" />
+                Verify Tickets
+              </span>
+            </button>
           </div>
         </div>
       </nav>
@@ -364,6 +379,8 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({
         {activeTab === "payments" && <PaymentsPage />}
 
         {activeTab === "analytics" && <AnalyticsPage />}
+
+        {activeTab === "verification" && <TicketVerificationPage />}
       </main>
     </div>
   );
