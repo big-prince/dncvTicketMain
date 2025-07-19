@@ -372,14 +372,6 @@ const TicketModal: React.FC<TicketModalProps> = ({
                         </button>
                       </div>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-slate-700">
-                      <span className="text-gray-400 font-medium">
-                        Sort Code:
-                      </span>
-                      <span className="text-white font-semibold">
-                        {bankDetails.sortCode}
-                      </span>
-                    </div>
                     <div className="flex justify-between items-center py-3">
                       <span className="text-gray-400 font-medium">Amount:</span>
                       <span className="text-2xl font-bold text-primary-400">
