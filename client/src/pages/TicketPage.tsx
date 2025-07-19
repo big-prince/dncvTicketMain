@@ -80,7 +80,7 @@ const TicketPage: React.FC = () => {
       description: "Standard seating with great view of the stage",
       image: "/images/Regular TIcket.jpg",
       available: 150,
-      features: ["Concert Program", "Photo Opportunity", "Reserved Seating"],
+      features: ["Concert Program", "Reserved Seating"],
       icon: Ticket,
       popular: false,
       gradient: "from-green-500 to-emerald-600",
@@ -95,7 +95,7 @@ const TicketPage: React.FC = () => {
       description: "Premium seating with exclusive perks",
       image: "/images/VIP single.jpg",
       available: 40,
-      features: ["Front Row Seating", "Light Refreshments"],
+      features: ["Front Row Seating", "Light Refreshments", "Photo Session"],
       icon: Crown,
       popular: true,
       gradient: "from-purple-500 to-pink-600",
@@ -113,7 +113,7 @@ const TicketPage: React.FC = () => {
       features: [
         "Premium Couple Seating",
         "Medium Refreshments",
-        "Private Photo Session",
+        "Photo Session",
       ],
       icon: Heart,
       popular: false,
@@ -130,9 +130,10 @@ const TicketPage: React.FC = () => {
       image: "/images/Table.jpg",
       available: 10,
       features: [
-        "Private VIP Table for 6",
+        "Private Table for 6",
         "Dedicated Service",
         "Premium Refreshments",
+        "Photo Session",
       ],
       icon: Trophy,
       popular: true,
@@ -442,8 +443,14 @@ const TicketPage: React.FC = () => {
               <div className="flex items-center justify-center gap-3 bg-gray-800/50 backdrop-blur-md px-6 py-4 rounded-2xl border border-gray-700/50">
                 <Phone className="h-5 w-5 text-amber-400" />
                 <div className="text-left">
-                  <p className="text-white font-medium">+234 814 934 9466</p>
-                  <p className="text-gray-400 text-sm">Jack</p>
+                  <div className="space-y-1">
+                    <p className="text-white font-medium">+234 814 934 9466</p>
+                    <p className="text-gray-400 text-sm">Jack</p>
+                  </div>
+                  <div className="mt-2 space-y-1">
+                    <p className="text-white font-medium">+234 806 868 3392</p>
+                    <p className="text-gray-400 text-sm">Elvis</p>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3 bg-gray-800/50 backdrop-blur-md px-6 py-4 rounded-2xl border border-gray-700/50">
