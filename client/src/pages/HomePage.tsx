@@ -544,8 +544,8 @@ const HomePage: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-elegant font-light"
             >
-              From student-friendly options to premium VIP experiences, find the
-              perfect way to enjoy our cultural celebration.
+              From student options to premium VIP experiences, find the perfect
+              way to enjoy our cultural celebration.
             </motion.p>
           </motion.div>
 
