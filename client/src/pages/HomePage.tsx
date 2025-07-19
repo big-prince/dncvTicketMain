@@ -107,10 +107,10 @@ const HomePage: React.FC = () => {
     },
     {
       id: "table",
-      name: "Table for 8",
+      name: "Table for 6",
       price: "₦200,000",
       features: [
-        "Private VIP Table for 8",
+        "Private VIP Table for 6",
         "Dedicated Butler Service",
         "Premium Catering Menu",
         "Reserved VIP Parking",
